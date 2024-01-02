@@ -21,6 +21,6 @@ public class Lv0_2024_01_02_No1 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println("a = "+a+"\nb = "+b);
+        System.out.println("a = "+a+"\nb = "+b );
     }
 }
