@@ -20,7 +20,7 @@
 
 import java.util.Scanner;
 
-public class Lv0_2024_01_04_No3 {
+public class Lv0_2024_01_04_No4 {
     public int solution(int a, int b) {
         int answer = 0;
         String tmp = a +""+b;
