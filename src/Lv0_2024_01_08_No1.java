@@ -23,11 +23,11 @@ public class Lv0_2024_01_08_No1 {
         int[] answer = new int[num_list.length+1];
         int len = answer.length-1;
         for(int i =0 ; i<len; i++){
-           answer[i] = num_list[i];
+            answer[i] = num_list[i];
         }
         answer[len] = (answer[len-1]>answer[len-2])
-                        ?answer[len-1]-answer[len-2]
-                        :answer[len-1]*2;
+                ?answer[len-1]-answer[len-2]
+                :answer[len-1]*2;
         return answer;
     }
     public static void main(String[] args){
