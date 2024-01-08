@@ -25,8 +25,8 @@ import java.util.Scanner;
 public class Lv0_2024_01_08_No2 {
     public int solution(int n, String control) {
         int answer = n;
-        for(int i =0; i < control.length(); i++){
-            switch (control.charAt(i)){
+        for(char ch : control.toCharArray()){
+            switch (ch){
                 case 'w':
                     answer +=1;
                     break;
