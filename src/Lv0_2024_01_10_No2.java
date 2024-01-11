@@ -25,25 +25,12 @@ public class Lv0_2024_01_10_No2 {
 
         List<Integer> ans = new ArrayList<Integer>();
         for(int i = l; i <=r; i++){
-            for(int k = 1; k<=5 ;k*=5) {
-                int num = i*k;
-                if(num <= r) {
-                    String str = Integer.toString(num);
-                    for (int j = 0; j < str.length(); j++) {
-                        if (str.charAt(j) != '0' && str.charAt(j) != '5') {
-                            break;
-                        } else if (j == str.length() - 1) {
-                            boolean tf = true;
-                            for (int a = 0; a < ans.size(); a++) {
-                                if (ans.get(a).equals(num)) {
-                                    tf = false;
-                                }
-                            }
-                            if (tf) {
-                                ans.add(num);
-                            }
-                        }
-                    }
+            String str = Integer.toString(i);
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) != '0' && str.charAt(j) != '5') {
+                    break;
+                } else if (j == str.length() - 1) {
+                    ans.add(i);
                 }
             }
         }
