@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Lv0_2024_01_10_No2 {
+public class Lv0_2024_01_11_No1 {
     public int[] solution(int l, int r) {
 
         List<Integer> ans = new ArrayList<Integer>();
@@ -46,7 +46,7 @@ public class Lv0_2024_01_10_No2 {
         return answer;
     }
     public static void main(String[] args) {
-        Lv0_2024_01_10_No2 s = new Lv0_2024_01_10_No2();
+        Lv0_2024_01_11_No1 s = new Lv0_2024_01_11_No1();
         Scanner sc = new Scanner(System.in);
         int l = sc.nextInt();
         int r = sc.nextInt();
