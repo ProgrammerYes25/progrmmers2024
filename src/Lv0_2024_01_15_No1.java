@@ -35,10 +35,10 @@ public class Lv0_2024_01_15_No1 {
     public static void main(String[] args) {
         Lv0_2024_01_15_No1 s = new Lv0_2024_01_15_No1();
         Scanner sc = new Scanner(System.in);
-        Boolean x1 = sc.nextBoolean();
-        Boolean x2 = sc.nextBoolean();
-        Boolean x3 = sc.nextBoolean();
-        Boolean x4 = sc.nextBoolean();
+        boolean x1 = sc.nextBoolean();
+        boolean x2 = sc.nextBoolean();
+        boolean x3 = sc.nextBoolean();
+        boolean x4 = sc.nextBoolean();
         boolean arrans = s.solution(x1, x2, x3, x4);
         System.out.println(arrans);
     }
