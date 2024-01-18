@@ -55,17 +55,17 @@ public class Lv0_2024_01_16_No1 {
             for(Map.Entry<Integer, Integer> e: hashset){
                 if(e.getValue() == 3){
                     maxKey =e.getKey();
-                    i++;
-                    continue;
+                }else{
+                    tmep[i++]=e.getKey();
                 }
-                tmep[i++]=e.getKey();
                 if(e.getValue() == 2){
                     num++;
                 }
             }
             switch (num){
                 case 0:
-                    answer = (int) Math.pow((10*maxKey+tmep[0]),2);
+                    System.out.println("maxKey : "+maxKey+", tmep[0] : "+tmep[0]);
+                    answer = (int) Math.pow(10*maxKey+tmep[0],2);
                     break;
                 case 2:
                     int h=Math.abs(tmep[0]-tmep[1]);
