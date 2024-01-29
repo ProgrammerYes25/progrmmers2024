@@ -24,20 +24,15 @@
 //  입출력 예 #4
 //    예제 4번에서 is_suffix가 my_string의 접미사가 아니기 때문에 0을 return 합니다.  예제 2번의 my_string는 "programmers"이고 모든 접미사는 "programmers", "rogrammers", "ogrammers", "grammers", "rammers", "ammers", "mmers", "mers", "ers", "rs", "s"입니다. 이를 사전순으로 정렬한 문자열 배열 ["ammers", "ers", "grammers", "mers", "mmers", "ogrammers", "programmers", "rammers", "rogrammers", "rs", "s"]를 return 합니다.
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Lv0_2024_01_27_No1 {
     public int solution(String my_string, String is_suffix) {
         int answer = 0;
-        List<String> strList = new ArrayList<>();
         for(int i = my_string.length()-1; i >=0; i--){
-            strList.add(my_string.substring(i));
-        }
-        for(int i = 0; i < strList.size(); i++){
-            if(strList.get(i).equals(is_suffix)){
-                answer++;
+            if(is_suffix.equals(my_string.substring(i))){
+                answer =1;
+                break;
             }
         }
         return answer;
