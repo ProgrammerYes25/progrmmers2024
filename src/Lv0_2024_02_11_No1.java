@@ -24,25 +24,18 @@
 //    따라서 [1, 2, 3]을 return 합니다.
 
 
+import java.util.Arrays;
 
 public class Lv0_2024_02_11_No1 {
     public int[] solution(int[] arr, int[] query) {
-        int[] answer = {};
-        int start = 0, end = arr.length-1, over =0;
         for (int i = 0; i < query.length; i++) {
             if (i % 2 == 0) {
-                end =  query[i]+over;
+                arr = Arrays.copyOfRange(arr, 0, query[i]+1);
             } else {
-                start +=  query[i];
-                over=start;
+                arr = Arrays.copyOfRange(arr, query[i], arr.length);
             }
         }
-        answer = new int[end-start+1];
-        int j =0;
-        for (int i = start; i <= end; i++) {
-            answer[j++] = arr[i];
-        }
-        return answer;
+        return arr;
     }
 
     public static void main(String[] args) {
