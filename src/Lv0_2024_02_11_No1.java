@@ -29,19 +29,16 @@ public class Lv0_2024_02_11_No1 {
     public int[] solution(int[] arr, int[] query) {
         int[] answer = {};
         int start = 0, end = arr.length-1, over =0;
-        for (int j : query) {
-            if (j % 2 == 0) {
-                end = j+over;
+        for (int i = 0; i < query.length; i++) {
+            if (i % 2 == 0) {
+                end =  query[i]+over;
             } else {
-                start += j;
+                start +=  query[i];
                 over=start;
             }
-            System.out.println(end + ","+start);
         }
-        System.out.println(end + ","+start);
         answer = new int[end-start+1];
-        System.out.println(answer.length);
-         int j =0;
+        int j =0;
         for (int i = start; i <= end; i++) {
             answer[j++] = arr[i];
         }
@@ -51,7 +48,7 @@ public class Lv0_2024_02_11_No1 {
     public static void main(String[] args) {
         Lv0_2024_02_11_No1 s = new Lv0_2024_02_11_No1();
         int[] i1 = {0, 1, 2, 3, 4, 5};
-        int[] i2 = {4, 1, 2};
+        int[] i2 = {5, 0};
         int[] arrans = s.solution(i1, i2);
         for(int i : arrans){
             System.out.print(i + ",");
