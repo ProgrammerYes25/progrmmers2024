@@ -19,7 +19,7 @@
 
 import java.util.Scanner;
 
-public class Lv0_2024_02_12_No1 {
+public class Lv0_2024_02_13_No1 {
     public int[] solution(int[] num_list, int n) {
         int[] answer = new int[num_list.length-n+1];
         int index = 0;
@@ -30,7 +30,7 @@ public class Lv0_2024_02_12_No1 {
     }
 
     public static void main(String[] args) {
-        Lv0_2024_02_12_No1 s = new Lv0_2024_02_12_No1();
+        Lv0_2024_02_13_No1 s = new Lv0_2024_02_13_No1();
         Scanner sc = new Scanner(System.in);
         int[] i1 = {0, 1, 2, 3, 4, 5};
         int i2 = sc.nextInt();
