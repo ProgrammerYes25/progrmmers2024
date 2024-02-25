@@ -22,13 +22,23 @@
 public class Lv0_2024_02_25_No1 {
     public int solution(int[] num_list) {
         int answer = 0;
-
+        for(int i = 0; i < num_list.length; i++){
+            int num = num_list[i];
+            while (num != 1){
+                if(num % 2 == 0){
+                    num = num / 2;
+                }else if(num % 2 != 0){
+                    num = (num-1) / 2;
+                }
+                answer++;
+            }
+        }
         return answer;
     }
 
     public static void main(String[] args) {
         Lv0_2024_02_25_No1 s = new Lv0_2024_02_25_No1();
-        int[] il = {1, 2, 3, 100, 99, 98};
+        int[] il = {12, 4, 15, 1, 14};
         int arrans = s.solution(il);
         System.out.print(arrans + ",");
     }
