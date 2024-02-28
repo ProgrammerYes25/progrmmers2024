@@ -16,17 +16,32 @@
 //  입출력 예 #2
 //    myString의 길이가 pat보다 더 짧기 때문에 myString의 부분 문자열 중 pat와 같은 문자열이 있을 수 없습니다. 따라서 0을 return 합니다.
 
+import java.util.Scanner;
+
 public class Lv0_2024_02_27_No1 {
     public int solution(String myString, String pat) {
         int answer = 0;
+        myString = myString.toLowerCase();
+        pat = pat.toLowerCase();
+        if(myString.length()>=pat.length()){
+            for(int i = 0; i < myString.length()-pat.length()+1; i++){
+                String str = myString.substring(i, i+pat.length());
+                if(str.equals(pat)){
+                    answer=1;
+                    break;
+                }
+            }
+        }
         return answer;
     }
 
 
     public static void main(String[] args) {
         Lv0_2024_02_27_No1 s = new Lv0_2024_02_27_No1();
-        int[] il = {2, 3, 4, 5};
-        int arrans = s.solution(il);
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.next();
+        String str2 = sc.next();
+        int arrans = s.solution(str1, str2);
         System.out.print(arrans + ",");
     }
 }
