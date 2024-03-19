@@ -31,17 +31,17 @@ public class Lv0_2024_03_17_No1 {
         List<Integer> arslist = new ArrayList<>();
         for(int i = 0; i < arr.length; i++){
             if(flag[i]){
-                len += arr[i];
-                arslist.add(arr[i]);
+                for(int j = 0; j < arr[i]; j++){
+                    arslist.add(arr[i]);
+                }
+            }else{
+                int size = arslist.size();
+                arslist.subList(size-arr[i], size).clear();
             }
         }
-        answer = new int[len];
-        int alen = 0;
-        for(int i = 0; i < arslist.size(); i++){
-            int num = arslist.get(i);
-            for(int j = 0; j < num; j++){
-                answer[alen++] = num ;
-            }
+        answer = new int[arslist.size()];
+        for(int i = 0; i < answer.length; i++){
+            answer[i] = arslist.get(i);
         }
         return answer;
     }
