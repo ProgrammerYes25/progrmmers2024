@@ -31,7 +31,7 @@ public class Lv0_2024_03_17_No1 {
         List<Integer> arslist = new ArrayList<>();
         for(int i = 0; i < arr.length; i++){
             if(flag[i]){
-                for(int j = 0; j < arr[i]; j++){
+                for(int j = 0; j < arr[i]*2; j++){
                     arslist.add(arr[i]);
                 }
             }else{
