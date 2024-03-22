@@ -22,14 +22,23 @@ import java.util.Scanner;
 
 public class Lv0_2024_03_22_No1 {
     public int[] solution(int[] arr, int k) {
-        int[] answer = {};
+        int[] answer = new int[k];
+        int arri = 0;
+        for(int i =0; i < k; i++){
+            for(int j = arri+1; j < arr.length; j++){
+
+            }
+            if(answer[i]==0) {
+                answer[i] = -1;
+            }
+        }
         return answer;
     }
     public static void main(String[] args) {
         Lv0_2024_03_22_No1 s = new Lv0_2024_03_22_No1();
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        int[] iarr = {0, 1, 1, 1, 0};
+        int[] iarr = {0, 1, 1, 2, 2, 3};
         int[] arrans = s.solution(iarr, num);
         for(int i : arrans){
             System.out.print(i + ",");
