@@ -18,18 +18,18 @@
 //  입출력 예 #2
 //    서로 다른 수의 개수가 2개 뿐이므로 서로 다른 수들을 앞에서부터 차례대로 저장한 [0, 1]에서 이후 2개의 인덱스를 -1로 채워넣은 [0, 1, -1, -1]을 return 합니다.
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lv0_2024_03_22_No1 {
     public int[] solution(int[] arr, int k) {
         int[] answer = new int[k];
-        int arri = 0;
-        for(int i =0; i < k; i++){
-            for(int j = arri+1; j < arr.length; j++){
-
-            }
-            if(answer[i]==0) {
+        arr = Arrays.stream(arr).distinct().toArray();
+        for(int i = 0; i < k; i++){
+            if(i >= arr.length){
                 answer[i] = -1;
+            }else {
+                answer[i] = arr[i];
             }
         }
         return answer;
@@ -38,7 +38,7 @@ public class Lv0_2024_03_22_No1 {
         Lv0_2024_03_22_No1 s = new Lv0_2024_03_22_No1();
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        int[] iarr = {0, 1, 1, 2, 2, 3};
+        int[] iarr = {0, 1, 1, 1, 1};
         int[] arrans = s.solution(iarr, num);
         for(int i : arrans){
             System.out.print(i + ",");
