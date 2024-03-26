@@ -18,6 +18,19 @@
 public class Lv0_2024_03_25_No1 {
     public int[] solution(int[] arr) {
         int[] answer = {};
+        int pow = 2;
+        int i = arr.length;
+        while(pow != i){
+            if(pow > i){
+                i += pow - i;
+                break;
+            }
+            pow *= 2;
+        }
+        answer = new int[i];
+        for(int j = 0; j < arr.length; j++){
+            answer[j] = arr[j];
+        }
         return answer;
     }
     public static void main(String[] args) {
