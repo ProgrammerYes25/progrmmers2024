@@ -18,7 +18,7 @@
 public class Lv0_2024_03_25_No1 {
     public int[] solution(int[] arr) {
         int[] answer = {};
-        int pow = 2;
+        int pow = 1;
         int i = arr.length;
         while(pow != i){
             if(pow > i){
