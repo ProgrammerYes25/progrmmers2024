@@ -18,21 +18,24 @@
 //  입출력 예 #3
 //    emergency가 [30, 10, 23, 6, 100]이므로 응급도의 크기 순서대로 번호를 매긴 [2, 4, 3, 5, 1]를 return합니다.
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lv0_2024_04_06_No1 {
-    public int solution(String num_str) {
-        int answer = 0;
-        for(int i = 0 ; i < num_str.length(); i++){
-            answer += num_str.charAt(i)-48;
+    public int[] solution(int[] emergency) {
+        int[] answer = new int[emergency.length];
+        int[] emergency2 = Arrays.stream(emergency).toArray();
+        for(int i = 0; i < emergency.length; i++){
+
         }
         return answer;
     }
     public static void main(String[] args) {
         Lv0_2024_04_06_No1 s = new Lv0_2024_04_06_No1();
-        Scanner sc = new Scanner(System.in);
-        String d = sc.next();
-        int arrans = s.solution(d);
-        System.out.print(arrans + ",");
+        int[] iarr = {3, 76, 24};
+        int[] arrans = s.solution(iarr);
+        for(int i : arrans){
+            System.out.print(i + ",");
+        }
     }
 }
