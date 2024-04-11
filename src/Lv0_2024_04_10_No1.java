@@ -23,7 +23,8 @@ import java.util.Scanner;
 
 public class Lv0_2024_04_10_No1 {
     public String solution(String a, String b) {
-        String answer = String.valueOf(Integer.parseInt(a)+Integer.parseInt(b));
+        String answer = String.valueOf((Double.parseDouble(a)+Double.parseDouble(b)));
+        answer = String.valueOf(Integer.parseInt(answer));
         return answer;
     }
     public static void main(String[] args) {
