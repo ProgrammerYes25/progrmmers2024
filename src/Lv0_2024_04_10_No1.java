@@ -19,13 +19,16 @@
 //  입출력 예 #3
 //    예제 3번의 a, b는 각각 0, 0이고 0 + 0 = 0입니다. 따라서 "0"을 return 합니다.
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Lv0_2024_04_10_No1 {
     public String solution(String a, String b) {
-        String answer = String.valueOf((Double.parseDouble(a)+Double.parseDouble(b)));
-        answer = String.valueOf(Integer.parseInt(answer));
-        return answer;
+            BigInteger ai = new BigInteger(a);
+            BigInteger bi = new BigInteger(b);
+            BigInteger andi =ai.add(bi);
+            String answer = andi.toString();
+            return answer;
     }
     public static void main(String[] args) {
         Lv0_2024_04_10_No1 s = new Lv0_2024_04_10_No1();
