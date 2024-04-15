@@ -19,9 +19,27 @@
 //    예제 2번의 arr의 원소 중 delete_list에 있는 원소는 없습니다. 따라서 arr 그대로인 [110, 66, 439, 785, 1]을 return 합니다.
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Lv0_2024_04_14_No1 {
     public int[] solution(int[] arr, int[] delete_list) {
-        int[] answer = {};
+        List<Integer> listi = new ArrayList<>();
+        int ck = -1;
+        for(int i = 0; i < delete_list.length; i++){
+            for (int j =0 ; j < arr.length; j++){
+                if(ck == j){
+                    continue;
+                }
+                if(arr[j] != delete_list[i]){
+                    listi.add(arr[j]);
+                }
+            }
+        }
+        int[] answer = new int[listi.size()];
+        for(int i = 0; i < answer.length; i++){
+            answer[i] = listi.get(i);
+        }
         return answer;
     }
     public static void main(String[] args) {
