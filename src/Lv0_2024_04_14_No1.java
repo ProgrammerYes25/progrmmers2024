@@ -25,20 +25,28 @@ import java.util.List;
 public class Lv0_2024_04_14_No1 {
     public int[] solution(int[] arr, int[] delete_list) {
         List<Integer> listi = new ArrayList<>();
-        int ck = -1;
-        for(int i = 0; i < delete_list.length; i++){
-            for (int j =0 ; j < arr.length; j++){
-                if(ck == j){
-                    continue;
-                }
-                if(arr[j] != delete_list[i]){
-                    listi.add(arr[j]);
+
+        for(int i = 0; i < arr.length; i++){
+            for (int j =0 ; j < delete_list.length; j++){
+                if(arr[i] == delete_list[j]){
+                    listi.add(arr[i]);
                 }
             }
         }
-        int[] answer = new int[listi.size()];
-        for(int i = 0; i < answer.length; i++){
-            answer[i] = listi.get(i);
+        int[] answer = new int[arr.length-listi.size()];
+        int arri =0;
+        for(int i = 0; i <arr.length; i++){
+            int ck = 0;
+            for (int j =0 ; j < listi.size(); j++){
+                if(arr[i]== listi.get(j)){
+                    ck = 1;
+                    break;
+                }
+            }
+            if(ck == 0) {
+                answer[arri++] = arr[i];
+            }
+
         }
         return answer;
     }
