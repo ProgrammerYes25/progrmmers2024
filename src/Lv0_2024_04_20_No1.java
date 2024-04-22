@@ -9,25 +9,20 @@
 //    1 ≤ str_list의 원소의 길이 ≤ 10
 //    1 ≤ ex의 길이 ≤ 5
 //  입출력 예
-//    str_list	ex	result
-//    ["abc", "def", "ghi"]	"ef"	"abcghi"
-//["abc", "bbc", "cbc"]	"c"	""
-//  입출력 예 설명
-//입출력 예 #1
-//
-//본문과 동일합니다.
-//입출력 예 #2
-//
-//리스트 안의 모든 문자열이 "c"를 포함하므로 빈 문자열을 return합니다.
+//    str_list          	  ex 	result
+//    ["abc", "def", "ghi"]	 "ef"	"abcghi"
+//    ["abc", "bbc", "cbc"]	 "c"	""
+// 입출력 예 설명
+//  입출력 예 #1
+//    본문과 동일합니다.
+//  입출력 예 #2
+//    리스트 안의 모든 문자열이 "c"를 포함하므로 빈 문자열을 return합니다.
 
 import java.util.Scanner;
 
 public class Lv0_2024_04_20_No1 {
-    public int solution(String str1, String str2) {
-        int answer = 0;
-        if(str2.contains(str1)){
-            answer =1;
-        }
+    public String solution(String[] str_list, String ex) {
+        String answer = "";
         return answer;
     }
     public static void main(String[] args) {
